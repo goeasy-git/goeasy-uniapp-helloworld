@@ -14,15 +14,12 @@ const app = new Vue({
 Vue.prototype.$goEasy = new GoEasy({
 	host: 'hangzhou.goeasy.io',
 	appkey: '您的appkey',
-	onConnected: function() {
-		console.log('连接成功！')
-	},
-	onDisconnected: function() {
-		console.log('连接断开！')
-	},
-	onConnectFailed: function(error) {
-		console.log('连接失败或错误！',JSON.stringify(error))
-	}
+	onConnected: function () {		console.log("GoEasy connect successfully.")    },    onDisconnected: function () {		console.log("GoEasy disconnected.")    },    onConnectFailed: function (error) {
+		uni.showToast({
+			icon:"none",
+			title:"GoEasy连接失败，请确认main.js文件15行appkey和host配置正确.",
+			duration:2000
+		})    }
 });	
 
 //格式化时间
