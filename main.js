@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import GoEasy from 'lib/goeasy-1.0.4.js'
+import GoEasy from 'lib/goeasy-1.0.5.js'
 
 Vue.config.productionTip = false
 
